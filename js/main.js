@@ -13,11 +13,13 @@ function darkOptionsAppear () {
 
 
 function getWaifu(){
-    let category = document.querySelector('input[name="categories"]:checked').value;
-    let genre = document.getElementsByName('genre')[0].value;
-    let genre2 = document.getElementsByName('genre')[1].value;
-
-    let res = genre !== undefined ? genre : genre2;
+    let category = document.querySelector('input[name="categories"]:checked').value; 
+    let res;
+    if(category === 'sfw'){
+      res = document.getElementsByName('genre')[0].value;;
+    } else if( category === 'nsfw'){
+      res = document.getElementsByName('genre')[1].value;;
+    } 
 
     fetch(`https://api.waifu.pics/${category}/${res}`)
         .then(res => res.json()) // parse response as JSON
