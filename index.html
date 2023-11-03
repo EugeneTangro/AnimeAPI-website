@@ -24,7 +24,7 @@
             
             <div class="dataList" id="light">
                 <label for="safeChoice">Choose category:</label>
-                <input type="text" name="genre" list="safe"  class="choiceCat"/>
+                <input type="text" name="genre" list="safe"  class="choiceCat" value="waifu"/>
                     <datalist id="safe">
                         <option value="waifu">waifu</option>
                         <option value="neko">neko</option>
@@ -70,7 +70,7 @@
             
             <div class="dataList" id="dark">
                 <label>Choose category:</label>
-                <input list="notSafe" name="genre">
+                <input list="notSafe" name="genre" id="inputText" value="waifu">
                     <datalist id="notSafe">
                         <option value="waifu">
                         <option value="neko">
@@ -86,9 +86,10 @@
     
 
    
-
-    <img src="" alt="">
-
+    <div class="imgContainer">
+        <img src="" alt="">
+    </div>
+    
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

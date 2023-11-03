@@ -1,14 +1,26 @@
 document.querySelector('button').addEventListener('click', getWaifu)
-document.getElementById('lightSide').addEventListener('click', lightOptionsAppear)
-document.getElementById('darkSide').addEventListener('click', darkOptionsAppear)
+document.getElementById('lightSide').addEventListener('click', lightMode)
+document.getElementById('darkSide').addEventListener('click', darkMode)
 
-function lightOptionsAppear () {
+
+function lightMode () {
   document.getElementById('light').style.display = 'flex';
   document.getElementById('dark').style.display = 'none';
+  let all = document.getElementsByTagName('*');
+  for(let i = 0; i < all.length-5; i++){
+    all[i].style.color = 'black';
+  }
+  document.querySelector('body').style.backgroundColor = 'white';
 }
-function darkOptionsAppear () {
+function darkMode () {
   document.getElementById('dark').style.display = 'flex';
   document.getElementById('light').style.display = 'none';
+  let all = document.getElementsByTagName('*');
+  for(let i = 0; i < all.length; i++){
+    all[i].style.color = 'white';
+  }
+  document.querySelector('body').style.backgroundColor = 'black';
+  document.getElementById('inputText').style.color = 'black'
 }
 
 
