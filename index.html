@@ -5,13 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="style/index.css">
-    <link rel="stylesheet" href="js/index.js">
+    <link rel="stylesheet" href="js/main.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
     <h1>Get Waifu</h1>
-    <input type="text" name="" value="">
-    <button type="button" name="button">Get Waifu</button>
+    <form>
+        <div>
+            <div class="choice">
+                <label for="lightSide" class="main">
+                    <input type="radio" name="categories" value="sfw" id="lightSide"/>
+                    Light Side
+                </label>
+            </div>
+            
+            <div class="dataList" id="light">
+                <label for="safeChoice">Choose category:</label>
+                <input type="text" name="genre" list="safe"  class="choiceCat"/>
+                    <datalist id="safe">
+                        <option value="waifu">waifu</option>
+                        <option value="neko">neko</option>
+                        <option value="shinobu">shinobu</option>
+                        <option value="megumin">megumin</option>
+                        <option value="bully">bully</option>
+                        <option value="cuddle">cuddle</option>
+                        <option value="cry">cry</option>
+                        <option value="hug"></option>
+                        <option value="awoo"></option>
+                        <option value="kiss"></option>
+                        <option value="lick"></option>
+                        <option value="pat"></option>
+                        <option value="smug"></option>
+                        <option value="bonk"></option>
+                        <option value="yeet"></option>
+                        <option value="blush"></option>
+                        <option value="smile"></option>
+                        <option value="wave"></option>
+                        <option value="highfive"></option>
+                        <option value="handhold"></option>
+                        <option value="nom"></option>
+                        <option value="bite"></option>
+                        <option value="glomp"></option>
+                        <option value="slap"></option>
+                        <option value="kill"></option>
+                        <option value="kick"></option>
+                        <option value="happy"></option>
+                        <option value="dance"></option>
+                        <option value="cringe"></option>
+                    </datalist>
+            </div>
+            
+        </div>
+        
+        <div>
+            <div class="choice">
+                <label for="darkSide" class="main">
+                    <input type="radio" name="categories" value="nsfw" id="darkSide" class="choiceCat"/>
+                    Dark Side
+                </label>
+            </div>
+            
+            <div class="dataList" id="dark">
+                <label>Choose category:</label>
+                <input list="notSafe" name="genre">
+                    <datalist id="notSafe">
+                        <option value="waifu">
+                        <option value="neko">
+                        <option value="trap">
+                        <option value="blowjob">
+                    </datalist>
+            </div>
+            
+        </div>
+
+        <button type="button" name="button">Get Waifu</button>
+    </form>
+    
+
+   
 
     <img src="" alt="">
 
